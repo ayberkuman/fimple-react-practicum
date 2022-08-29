@@ -1,0 +1,137 @@
+.App {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #33383f;
+}
+
+/* --------- SQUARE ------------- */
+#first {
+  color: #ffc200;
+}
+#second {
+  color: #fa5c0c;
+}
+.empty-square {
+  border: 3px solid #05ccab;
+  float: left;
+  font-size: 40px;
+  height: 80px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 80px;
+  background-color: #212628;
+}
+
+.square {
+  border: 5px solid #05ccab;
+  float: left;
+  font-size: 40px;
+  height: 80px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 80px;
+  background-color: #212628;
+}
+.empty-square:hover {
+  background-color: #33383f;
+}
+/* --------- WINNER ROW ------------- */
+.winner-row {
+  display: inline;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffc200;
+  box-shadow: 10px 10px 50px 20px #0ff;
+}
+/* --------- BOARD AND GAME ------------- */
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.board {
+  border-radius: 10px;
+  display: grid;
+  background-color: #212628;
+  padding: 30px;
+}
+.status,
+.restart {
+  margin-top: 10px;
+  font-size: large;
+  color: #05ccab;
+  font-weight: 500;
+}
+.status {
+  text-align: center;
+  font-size: large;
+  color: #05ccab;
+  font-weight: 500;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+/** ---------- BUTTON STYLES------------ **/
+.restart {
+  cursor: pointer;
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #05ccab;
+  border-color: #3caa989c;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.restart:active {
+  color: #fff;
+  background-color: #05ccab;
+  border-color: #3caa989c;
+}
+
+.restart:hover {
+  color: #05ccab;
+  background-color: #212628;
+  border-color: #3caa989c;
+}
+
+.restart:focus {
+  box-shadow: 1px 1px 30px 3px rgba(0, 255, 255, 0.205);
+}
+.game-mode {
+  position: absolute;
+  top: 5vh;
+}
+.game-mode-buttons {
+  cursor: pointer;
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #05ccab;
+  border-color: #3caa989c;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.game-mode-buttons-active {
+  cursor: not-allowed;
+  padding: 10px 15px;
+  color: #05ccab;
+  background-color: #212628;
+  border-color: #3caa989c;
+}
+
+.game-mode-buttons:hover {
+  color: #05ccab;
+  background-color: #212628;
+  border-color: #3caa989c;
+}
+.game-mode-buttons:hover {
+  box-shadow: 1px 1px 30px 3px rgba(0, 255, 255, 0.205);
+}

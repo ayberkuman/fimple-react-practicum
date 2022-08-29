@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./styles/App.css";
+import { Board } from "./components/vsPlayer/Board";
+import Game from "./components/vsComputer/Game";
+import { useState } from "react";
 function App() {
+  const [isComputer, setIsComputer] = useState(true);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      {isComputer ? <Game /> : <Board />}
+      <div className="game-mode">
+        <button
+          className={
+            isComputer ? "game-mode-buttons" : "game-mode-buttons-active"
+          }
+          onClick={() => setIsComputer(false)}
         >
-          Learn React
-        </a>
-      </header>
+          vs Player
+        </button>
+        <button
+          className={
+            !isComputer ? "game-mode-buttons" : "game-mode-buttons-active"
+          }
+          onClick={() => setIsComputer(true)}
+        >
+          vs Computer
+        </button>
+      </div>
     </div>
   );
 }
